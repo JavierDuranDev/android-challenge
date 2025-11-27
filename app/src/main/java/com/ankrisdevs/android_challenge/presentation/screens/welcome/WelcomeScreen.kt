@@ -18,9 +18,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.ankrisdevs.android_challenge.R
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +43,7 @@ fun WelcomeScreen(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(text = "Welcome")
+                    Text(text = stringResource(R.string.welcome_screen_name))
                 },
                 modifier = Modifier
             )
@@ -56,9 +58,9 @@ fun WelcomeScreen(
         ) {
             Text(
                 text = if (uiState.isLoading) {
-                    "Recibiendo Autorización, espere un momento"
+                    stringResource(R.string.welcome_screen_waiting_message)
                 } else {
-                    "¡Perfecto! Continúa para home"
+                    stringResource(R.string.welcome_screen_ready_message)
                 }
             )
 
@@ -80,7 +82,7 @@ fun WelcomeScreen(
                         .height(55.dp)
                         .padding(horizontal = 32.dp)
                 ) {
-                    Text(text = "Continuar")
+                    Text(text = stringResource(R.string.welcome_screen_navigate))
                 }
             }
         }

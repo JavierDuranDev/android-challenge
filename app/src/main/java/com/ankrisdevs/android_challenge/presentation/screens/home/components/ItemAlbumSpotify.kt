@@ -18,10 +18,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.ankrisdevs.android_challenge.R
 import com.ankrisdevs.android_challenge.domain.entities.AlbumEntity
+import com.ankrisdevs.android_challenge.ui.theme.PrimaryColor
 
 @Composable
 fun ItemAlbumSpotify(
@@ -31,7 +34,7 @@ fun ItemAlbumSpotify(
     Card(
         border = BorderStroke(
             width = 1.5.dp,
-            color = Color(0xFF0B5FD5)
+            color = PrimaryColor
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 4.dp
@@ -53,7 +56,7 @@ fun ItemAlbumSpotify(
 
             AsyncImage(
                 model = album.image,
-                contentDescription = "image prueba",
+                contentDescription = stringResource(R.string.item_album_spotify_image_content_description),
                 modifier = Modifier.size(100.dp),
                 onError = {
                     Log.i("Image", "Ha ocurrido un error ${it.result.throwable.message}")
@@ -72,7 +75,9 @@ fun ItemAlbumSpotify(
                         .height(12.dp)
                 )
                 Text(text = buildAnnotatedString {
-                    append("by ${album.artist}")
+                    append(stringResource(R.string.item_album_spotify_by))
+                    append(" ")
+                    append(album.artist)
                 }, modifier = Modifier.fillMaxWidth())
             }
         }

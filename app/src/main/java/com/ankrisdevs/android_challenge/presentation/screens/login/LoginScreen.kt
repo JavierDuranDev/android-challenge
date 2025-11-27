@@ -18,8 +18,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.ankrisdevs.android_challenge.R
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -46,7 +48,7 @@ fun LoginScreen(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(text = "Login")
+                    Text(text = stringResource(R.string.login_screen_name))
                 },
                 modifier = Modifier
             )
@@ -59,7 +61,7 @@ fun LoginScreen(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Selecciona el botón para autorización")
+            Text(text = stringResource(R.string.login_screen_select_authorization))
 
             Spacer(
                 modifier = Modifier
@@ -76,7 +78,7 @@ fun LoginScreen(
                     .height(55.dp)
                     .padding(horizontal = 32.dp)
             ) {
-                Text(text = "Autorizar")
+                Text(text = stringResource(R.string.login_screen_navigate))
             }
         }
     }

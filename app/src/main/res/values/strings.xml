@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">android-challenge</string>
+    <string name="app_name">DevSoulify</string>
+
+    <string name="login_screen_name">Login</string>
+    <string name="login_screen_select_authorization">Select the authorization button</string>
+    <string name="login_screen_navigate">Continue</string>
+
+    <string name="welcome_screen_name">Welcome</string>
+    <string name="welcome_screen_waiting_message">Receiving Authorization, please wait a moment</string>
+    <string name="welcome_screen_ready_message">Done! Select the button to continue</string>
+    <string name="welcome_screen_navigate">Continue</string>
+
+    <string name="home_screen_name">Home</string>
+    <string name="home_screen_navigate_back">Navigate Back</string>
+
+    <string name="item_album_spotify_by">by</string>
+    <string name="item_album_spotify_image_content_description">Album Image</string>
 </resources>

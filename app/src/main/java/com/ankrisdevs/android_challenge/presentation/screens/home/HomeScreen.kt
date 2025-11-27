@@ -22,9 +22,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.ankrisdevs.android_challenge.R
 import com.ankrisdevs.android_challenge.presentation.screens.home.components.ItemAlbumSpotify
 
 
@@ -46,7 +48,7 @@ fun HomeScreen(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(text = "Home")
+                    Text(text = stringResource(R.string.login_screen_name))
                 },
                 modifier = Modifier
             )
@@ -97,7 +99,7 @@ fun HomeScreen(
                         .height(55.dp)
                         .padding(horizontal = 32.dp)
                 ) {
-                    Text(text = "Volver")
+                    Text(text = stringResource(R.string.home_screen_navigate_back))
                 }
             }
         }
