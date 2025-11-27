@@ -10,6 +10,9 @@ activityCompose = "1.12.0"
 composeBom = "2025.11.01"
 navigationCompose = "2.9.6"
 kotlinSerialization = "1.9.0"
+hilt = "2.57.1"
+hilt-navigation = "1.2.0"
+ksp = "2.1.21-2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +35,10 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 #Serialization
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+#Dagger Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -39,3 +46,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 #Serialization plugin
 jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }
+#Dagger Hilt plugin
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+#Kotlin Symbol Processing --> Herramienta de google que ayuda a las librerías a procesar el lenguaje de Kotlin de forma nativa y rápida. ksp + rápido que kapt
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

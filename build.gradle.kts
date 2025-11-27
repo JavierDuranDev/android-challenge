@@ -3,4 +3,8 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
+    //KSP plugin
+    alias(libs.plugins.ksp) apply false
+    //Dagger Hilt plugin
+    alias(libs.plugins.hilt) apply false
 }

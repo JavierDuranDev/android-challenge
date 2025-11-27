@@ -4,6 +4,10 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     //Serialization plugin
     alias(libs.plugins.jetbrainsKotlinSerialization)
+    //KSP plugin
+    alias(libs.plugins.ksp)
+    //Dagger Hilt plugin
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -61,6 +65,14 @@ dependencies {
     //Navigation libs
     //--Navigation
     implementation(libs.androidx.navigation.compose)
+
+    //DI o Dependency Injection
+    //--Dagger Hilt
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation)
+
+    //--KSP
+    ksp(libs.hilt.compiler)
 
     //Testing libs
     testImplementation(libs.junit)
