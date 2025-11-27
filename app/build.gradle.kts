@@ -74,6 +74,10 @@ dependencies {
     //--KSP
     ksp(libs.hilt.compiler)
 
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.adapter)
+
     //Testing libs
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
