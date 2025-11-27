@@ -9,9 +9,11 @@
     <string name="welcome_screen_waiting_message">Receiving Authorization, please wait a moment</string>
     <string name="welcome_screen_ready_message">Done! Select the button to continue</string>
     <string name="welcome_screen_navigate">Continue</string>
+    <string name="welcome_screen_loading_message">Loading credentials…</string>
 
     <string name="home_screen_name">Home</string>
     <string name="home_screen_navigate_back">Navigate Back</string>
+    <string name="home_screen_loading_message">Loading new releases…</string>
 
     <string name="item_album_spotify_by">by</string>
     <string name="item_album_spotify_image_content_description">Album Image</string>
