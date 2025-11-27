@@ -1,5 +1,9 @@
 package com.ankrisdevs.android_challenge.data.di
 
+import com.ankrisdevs.android_challenge.data.api.SpotifyApiAuth
+import com.ankrisdevs.android_challenge.data.api.SpotifyApiServices
+import com.ankrisdevs.android_challenge.data.repositories.AlbumRepositoryImpl
+import com.ankrisdevs.android_challenge.domain.repositories.AlbumRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,6 +17,21 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object DataModule {
+
+    @Provides
+    fun provideAlbumRepository(apiServices: SpotifyApiServices): AlbumRepository {
+        return AlbumRepositoryImpl(apiServices)
+    }
+
+    @Provides
+    fun provideApiServices(@ApiServicesRetrofit retrofit: Retrofit): SpotifyApiServices {
+        return retrofit.create(SpotifyApiServices::class.java)
+    }
+
+    @Provides
+    fun provideApiAuth(@ApiAuthRetrofit retrofit: Retrofit): SpotifyApiAuth {
+        return retrofit.create(SpotifyApiAuth::class.java)
+    }
 
     //Retrofit for Authorization
     @ApiAuthRetrofit
